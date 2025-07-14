@@ -1,4 +1,3 @@
-/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +6,8 @@
 }
 
 body {
-  height: 100vh;
   background: #f6f9fc;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,23 +16,21 @@ body {
 .signup-box {
   background: #fff;
   padding: 2rem;
-  width: 90%;
   max-width: 400px;
+  width: 90%;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-.signup-box h1 {
+h1 {
+  text-align: center;
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
   color: #333;
 }
 
 .input-box {
   position: relative;
   margin-bottom: 1.3rem;
-  text-align: left;
 }
 
 .input-box input {
@@ -42,11 +39,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 8px;
   outline: none;
-  transition: border 0.2s ease;
-}
-
-.input-box input:focus {
-  border-color: #667eea;
 }
 
 .input-box label {
@@ -55,50 +47,52 @@ body {
   left: 0.75rem;
   transform: translateY(-50%);
   background: #fff;
-  color: #aaa;
+  color: #999;
   font-size: 0.9rem;
   padding: 0 0.3rem;
-  transition: 0.2s ease;
+  transition: 0.2s;
   pointer-events: none;
 }
 
 .input-box input:focus + label,
 .input-box input:not(:placeholder-shown) + label {
-  top: -8px;
+  top: -10px;
   left: 10px;
   font-size: 0.75rem;
   color: #667eea;
 }
 
+.error {
+  font-size: 0.75rem;
+  color: red;
+  margin-top: 0.3rem;
+  display: block;
+}
+
 button {
   width: 100%;
-  padding: 0.9rem;
+  padding: 0.85rem;
   background: #667eea;
-  color: white;
+  color: #fff;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  margin-top: 1rem;
+  transition: 0.3s ease;
 }
 
 button:hover {
-  background-color: #556cd6;
+  background: #556cd6;
 }
 
 .bottom-links {
   margin-top: 1rem;
-  font-size: 0.9rem;
+  text-align: center;
 }
 
 .bottom-links a {
-  text-decoration: none;
   color: #667eea;
-}
-
-/* Responsive */
-@media (max-width: 420px) {
-  .signup-box {
-    padding: 1.5rem;
-  }
+  font-size: 0.9rem;
+  text-decoration: none;
 }
